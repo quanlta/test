@@ -62,44 +62,53 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "",
       element: <Layout />,
       children: [
         {
           path: "",
           element: <HomePage />,
+          key: "home",
         },
         {
           path: "payment",
           element: <PaymentPage />,
+          key: "payment",
         },
         {
           path: "about-us",
           element: <AboutUs />,
+          key: "about-us",
         },
         {
           path: "product",
           element: <ProductsPage />,
+          key: "product",
         },
         {
           path: "shop",
           element: <CoffeeShopsPage2 />,
+          key: "shop",
         },
         {
           path: "coffee-shops",
           element: <CoffeeShopsPage />,
+          key: "coffee-shops",
         },
         {
           path: "coffee-shops/:id",
           element: <CoffeeShopDetailPage />,
+          key: "coffee-shop-detail",
         },
         {
           path: "booking-history",
           element: <BookingHistoryPage />,
+          key: "booking-history",
         },
         {
           path:"order-history",
           element: <OrderHistoryPage />,
+          key: "order-history",
         }
       ],
     },
@@ -122,80 +131,87 @@ function App() {
     },
     {
       path: "register",
-      element: <RegisterPage />,
-    },
-    {
-      path: "admin",
-      element: (
-        <Mycontext.Provider value={values}>
-          <AdminPage />
-        </Mycontext.Provider>
-      ),
       children: [
         {
           path: "user-list",
           element: <UserList />,
+          key: "user-list",
         },
         {
           path: "user-profile/:id",
           element: <UserProfile />,
+          key: "user-profile",
         },
         {
           path: "user-create",
           element: <UserCreate />,
+          key: "user-create",
         },
         {
           path: "dashboard",
           element: <Ecommerce />,
+          key: "dashboard",
         },
         {
           path: "product-list",
           element: <ProductList />,
+          key: "product-list",
         },
         {
           path: "product-view/:id",
           element: <ProductView />,
+          key: "product-view",
         },
         {
           path: "product-create",
           element: <ProductCreate />,
+          key: "product-create",
         },
         {
           path: "coffeeshop-list",
           element: <CoffeeshopList />,
+          key: "coffeeshop-list",
         },
         {
           path: "coffeeshop-view/:id",
           element: <CoffeeshopView />,
+          key: "coffeeshop-view",
         },
         {
           path: "coffeeshop-create",
           element: <CoffeeCreate />,
+          key: "coffeeshop-create",
         },
         {
           path: "orders-list",
           element: <OrdersListPage />,
+          key: "orders-list",
         },
         {
           path: "orders-view/:id",
           element: <OrdersView />,
+          key: "orders-view",
         },
-
+      
         {
           path: "invoice-list",
           element: <Invoices />,
+          key: "invoice-list",
         },
         {
           path: "messages",
           element: <MessagePage />,
+          key: "messages",
         },
         {
           path: "settings",
           element: <SettingsPage />,
+          key: "settings",
         },
         {
           path: "booking",
           element: <Booking />,
+          key: "booking",
         },
       ],
     },

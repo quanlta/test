@@ -1,102 +1,149 @@
-import React from "react";
+import React, { startTransition, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Dropdown } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import FloatCardComponent from "../../../admin/components_admin/cards/FloatCardComponent";
 import PaginationComponent from "../../../admin/components_admin/PaginationComponent";
 import BookingTableComponent from "../../../admin/components_admin/tables/BookingTableComponent";
 import LabelFieldComponent from "../../../admin/components_admin/fields/LabelFieldComponent";
-import orders from "../../../assets/data/orders.json";
 import Footer from "../../../admin/layouts_admin/Footer_admin";
+import api from "../../../config/axios";
 
-export default function OrderListPage() {
+export default function BookingListPage() {
+    const [bookings, setBookings] = useState([]);
+    const [filteredBookings, setFilteredBookings] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    useEffect(() => {
+        const fetchBookings = async () => {
+            setLoading(true);
+            setError("");
 
-    const floats = [
-        { "title": "Pending Bookings", "digit": 547, "icon": "event", "variant": "lg purple" }, 
-        { "title": "Confirmed Bookings", "digit": 398, "icon": "check_circle", "variant": "lg blue" },
-        { "title": "Completed Bookings", "digit": 605, "icon": "thumb_up", "variant": "lg green" },
-        { "title": "Cancelled Booking", "digit": 249, "icon": "remove_circle", "variant": "lg red" }
-    ];
+            try {
+                const response = await api.get("PODBooking/all");
+                const bookingData = response.data.map(booking => ({
+                    id: booking.id,
+                    pod: {
+                        name: booking.pod?.description || "Unknown",
+                        price: booking.pod?.price || "Unknown",
+                    },
+                    startTime: booking.startTime || "Unknown",
+                    endTime: booking.endTime || "Unknown",
+                    total: booking.totalPrice || "Unknown",
+                    accountId: booking.pod?.accountId || "Unknown",
+                }));
+
+                // Fetch usernames for each booking
+                const bookingsWithUsernames = await Promise.all(bookingData.map(async (booking) => {
+                    try {
+                        const userResponse = await api.get(`account/id`, { params: { id: booking.accountId } });
+                        console.log(userResponse.data.email);
+                        return {
+                            ...booking,
+                            username: userResponse.data.email || "Unknown"
+                        };
+                    } catch (error) {
+                        console.error(`Error fetching username for accountId ${booking.accountId}:`, error);
+                        return {
+                            ...booking,
+                            username: "Unknown"
+                        };
+                    }
+                }));
+
+                setBookings(bookingsWithUsernames);
+                setFilteredBookings(bookingsWithUsernames);
+            } catch (error) {
+                console.error("Error fetching bookings:", error);
+                setError("Error fetching bookings.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchBookings();
+    }, []);
+
+    // Hàm tìm kiếm Bookings theo ID hoặc Name
+    const handleSearch = () => {
+        if (searchTerm) {
+            if (!isNaN(searchTerm)) {
+                // Tìm kiếm theo ID
+                const result = bookings.find(booking => booking.id === parseInt(searchTerm));
+                setFilteredBookings(result ? [result] : []);
+                setError(result ? "" : "No booking found with that ID.");
+            } else {
+                // Tìm kiếm theo Name
+                const filtered = bookings.filter(booking => {
+                    const bookingName = booking.pod.description || ""; // Đảm bảo có giá trị hợp lệ để gọi toLowerCase
+                    return bookingName.toLowerCase().includes(searchTerm.toLowerCase());
+                });
+                setFilteredBookings(filtered);
+                setError(filtered.length > 0 ? "" : "No bookings found with that name.");
+            }
+        } else {
+            setFilteredBookings(bookings);
+        }
+    };
+
+const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+}
+
+useEffect(() => {
+    handleSearch();
+}, [searchTerm, bookings]);
 
     return (
         <div className="mc-main active">
             <Row>
                 <Col xl={12}>
-                    <div className="mc-card">
+                <div className="mc-card">
                         <div className='mc-breadcrumb'>
-                            <h3 className="mc-breadcrumb-title">Booking List</h3>
+                            <h3 className="mc-breadcrumb-title">Bookings List</h3>
                             <ul className="mc-breadcrumb-list">
                                 <li className="mc-breadcrumb-item"><Link to='#' className="mc-breadcrumb-link">Home</Link></li>
-                                <li className="mc-breadcrumb-item"><Link to='#' className="mc-breadcrumb-link">Orders</Link></li>
-                                <li className="mc-breadcrumb-item">Booking List</li>
+                                <li className="mc-breadcrumb-item"><Link to='#' className="mc-breadcrumb-link">Bookings</Link></li>
+                                <li className="mc-breadcrumb-item">Bookings List</li>
                             </ul>
                         </div>
                     </div>
                 </Col>
-                {floats.map((float, index) => (
-                    <Col key={index} xl={3}>
-                        <FloatCardComponent 
-                            variant={float.variant}
-                            digit={float.digit}
-                            title={float.title}
-                            icon={float.icon}
-                        />
-                    </Col>
-                ))}
                 <Col xl={12}>
                     <div className="mc-card">
-                        <div className="mc-card-header">
-                            <h4 className="mc-card-title">Booking Information</h4>
-                            <Dropdown bsPrefix="mc-dropdown">
-                                <Dropdown.Toggle bsPrefix="mc-dropdown-toggle">
-                                    <i className='material-icons'>more_horiz</i>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu align="end" className="mc-dropdown-paper">
-                                    <button type='button' className='mc-dropdown-menu'><i className='material-icons'>edit</i><span>Edit</span></button>
-                                    <button type='button' className='mc-dropdown-menu'><i className='material-icons'>delete</i><span>Delete</span></button>
-                                    <button type='button' className='mc-dropdown-menu'><i className='material-icons'>download</i><span>Download</span></button>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </div>
-                        <Row xs={1} sm={4}>
-                            <Col>
-                                <LabelFieldComponent 
-                                    label="Show By"
-                                    option={["12 row", "24 row", "36 row"]}
-                                    labelDir="label-col"
-                                    fieldSize="mb-4 w-100 h-md"
-                                /> 
-                            </Col>
-                            <Col>
-                                <LabelFieldComponent 
-                                    label="Status By"
-                                    option={["Pending", "Shipped", "Received", "Cancelled"]}
-                                    labelDir="label-col"
-                                    fieldSize="mb-4 w-100 h-md"
-                                /> 
-                            </Col>
-                            <Col>
-                                <LabelFieldComponent 
-                                    type="date"
-                                    label="Issued By"
-                                    labelDir="label-col"
-                                    fieldSize="mb-4 w-100 h-md"
-                                /> 
-                            </Col>
-                            <Col>
-                                <LabelFieldComponent 
+                        <Row>
+                            <Col xs={12} sm={6} md={4} lg={3}>
+                                <LabelFieldComponent
                                     type="search"
                                     label="Search By"
+                                    placeholder="ID / Name"
                                     labelDir="label-col"
                                     fieldSize="mb-4 w-100 h-md"
-                                    placeholder="id / name / email"
-                                /> 
+                                    value={searchTerm}
+                                    onChange={handleSearchChange}
+                                    variant="outlined"
+                                />
+                            </Col>
+                            <Col xl={12}>
+                                {loading ? (
+                                    <p>Loading...</p>
+                                ) : error ? (
+                                    <p>{error}</p>
+                                ) : (
+                                    <BookingTableComponent
+                                    thead={["POD + Price/hour", "Start Time", "End Time", "Email"]}
+                                    tbody={filteredBookings.map(booking => ({
+                                        id: booking.id,
+                                        pod: `${booking.pod.name } | ${booking.pod.price} vnd`,
+                                        startTime: booking.startTime,
+                                        endTime: booking.endTime,
+                                        username: booking.username
+                                    }))}
+                                    />
+                                )}
+                                <PaginationComponent />
                             </Col>
                         </Row>
-                        <BookingTableComponent 
-                            thead={ orders.thead } 
-                            tbody={ orders.tbody } 
-                        />
-                        <PaginationComponent />
                     </div>
                 </Col>
             </Row>

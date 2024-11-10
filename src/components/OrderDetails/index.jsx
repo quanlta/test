@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import api from '../../config/axios'; // Ensure the import path is correct
+import { Link } from 'react-router-dom';
 
 const OrderDetails = ({ orderId, toggleDetails }) => {
     const [order, setOrder] = useState(null);
@@ -50,6 +51,7 @@ const OrderDetails = ({ orderId, toggleDetails }) => {
                         <th>Product Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
+                        <th>Go to CoffeeShop</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +61,11 @@ const OrderDetails = ({ orderId, toggleDetails }) => {
                             <td>{detail.product.name}</td>
                             <td>{detail.quantity}</td>
                             <td>${detail.price}</td>
+                            <td>
+                                <Link to={`/coffee-shops/${detail.shop.id}`}>
+                                    {detail.shop.name}
+                                </Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

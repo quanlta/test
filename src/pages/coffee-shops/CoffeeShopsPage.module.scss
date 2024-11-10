@@ -1,0 +1,109 @@
+.coffeeShopsPage {
+  // Các style khác
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}.coffeeShopsPage {
+  // Các style khác
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}
+
+.coffeeShopsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.coffeeShopCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.coffeeShopsPage {
+  position: relative;
+  padding-top: 50px; /* Để tạo khoảng trống cho nút logo */
+}
+
+.logoButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoButton img {
+  width: 40px;
+  height: 40px;
+}
+.coffeeShopCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.coffeeShopCard h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.coffeeShopCard p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}

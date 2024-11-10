@@ -1,0 +1,65 @@
+@import '../1-helpers/mixins';
+@import '../1-helpers/breakpoints';
+
+.mc-breadcrumb {
+    @include flex-dimension(center, space-between, 0px);
+
+    @include mobile-breakpoint {
+        flex-direction: column;
+        gap: 15px 0px;
+    }
+}
+
+body.dark .mc-breadcrumb-title {
+    color: #E4E4E4;
+}
+
+body.dark li.mc-breadcrumb-item {
+    color: #E4E4E4 !important;
+}
+
+body.dark .mc-breadcrumb-item::after {
+    color: #E4E4E4;
+}
+
+.mc-breadcrumb-title {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.mc-breadcrumb-list {
+    @include flex-dimension(center, flex-start, 0px);
+}
+
+.mc-breadcrumb-item {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #5e5d72 !important;
+    @include transition-linear;
+
+    &::after {
+        content: "~";
+        font-size: 14px;
+        margin: 0px 6px;
+        color: #5e5d72;
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.mc-breadcrumb-link {
+    color: #0858f7;
+    text-decoration: none;
+    @include transition-linear;
+
+    &:hover {
+        color: #0858f7;
+        text-decoration: underline;
+    }
+}

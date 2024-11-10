@@ -1,0 +1,145 @@
+@import '../1-helpers/mixins';
+
+.mc-float-card {
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 7px 12px rgba(0, 0, 0, 10%));
+
+    &.sm {
+        padding: 16px;
+        h3 { font-size: 22px; margin-bottom: 4px; }
+        p { font-size: 14px; }
+    }
+    
+    &.md {
+        padding: 16px;
+        h3 { font-size: 24px; margin-bottom: 6px; }
+        p { font-size: 15px; }
+    }
+
+    &.lg {
+        padding: 16px;
+        h3 { font-size: 26px; margin-bottom: 8px; }
+        p { font-size: 16px; }
+    }
+
+    i {
+        filter: drop-shadow(3px 5px 0px rgba(0, 0, 0, 7%));
+        font-size: 50px;
+        position: absolute;
+        top: -18px;
+        right: 5px;
+    }
+
+    h3 {
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+
+    p {
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+
+    &.purple {
+        background: linear-gradient(#ed68ff, #be0ee1);
+        i { color: #f3a0ff; }
+    }
+
+    &.yellow {
+        background: linear-gradient(#f4d02b, #e1940e);
+        i { color: #f6e053; }
+    }
+
+    &.green {
+        background: linear-gradient(#4eda89, #1a9f53);
+        i { color: #89ecb3; }
+    }
+
+    &.blue {
+        background: linear-gradient(#64b3f6, #2b77e5);
+        i { color: #96cefa; }
+    }
+
+    &.red {
+        background: linear-gradient(#ff6179, #f11133);
+        i { color: #ff9baa; }
+    }
+}
+
+// .mc-float-card {
+//     position: relative;
+//     margin-bottom: 24px;
+//     border-radius: 8px;
+//     filter: drop-shadow(0px 7px 12px rgba(0, 0, 0, 10%));
+
+//     &.sm {
+//         padding: 16px;
+//         h3 { font-size: 22px; margin-bottom: 4px; }
+//         p { font-size: 14px; }
+//     }
+    
+//     &.md {
+//         padding: 16px;
+//         h3 { font-size: 24px; margin-bottom: 6px; }
+//         p { font-size: 15px; }
+//     }
+
+//     &.lg {
+//         padding: 16px;
+//         h3 { font-size: 26px; margin-bottom: 8px; }
+//         p { font-size: 16px; }
+//     }
+
+//     i {
+//         filter: drop-shadow(3px 5px 0px rgba(0, 0, 0, 7%));
+//         font-size: 50px;
+//     }
+
+//     h3 {
+//         text-transform: capitalize;
+//         color: #ffffff;
+//     }
+
+//     p {
+//         text-transform: capitalize;
+//         color: #ffffff;
+//     }
+
+//     &.purple {
+//         background: linear-gradient(#ed68ff, #be0ee1);
+//         i { color: #f3a0ff; }
+//     }
+
+//     &.yellow {
+//         background: linear-gradient(#f4d02b, #e1940e);
+//         i { color: #f6e053; }
+//     }
+
+//     &.green {
+//         background: linear-gradient(#4eda89, #1a9f53);
+//         i { color: #89ecb3; }
+//     }
+
+//     &.blue {
+//         background: linear-gradient(#64b3f6, #2b77e5);
+//         i { color: #96cefa; }
+//     }
+
+//     &.red {
+//         background: linear-gradient(#ff6179, #f11133);
+//         i { color: #ff9baa; }
+//     }
+// }
+
+
+//     .mc-float-card {
+//         i { @include position-top-left(absolute, -18px, 320px, 1) }
+//     }
+
+
+ 
+//     .mc-float-card {
+//        i { @include position-top-left(absolute, -18px, 320px, 1) }
+//     }

@@ -1,0 +1,104 @@
+header{width: 100%; height: 70px; background: #fff; position: fixed; top: 0px;
+    left: 0px; z-index: 1000; }
+
+
+    body.dark header{background: #112143 !important;}
+    
+    header .logo{text-decoration: none; gap: 10px;}
+    header .logo img{width: 50px; }
+    header .logo span{color: #b78649; font-weight: 800; font-size: 20px;}
+    
+    header .part2{display: flex; justify-content: space-between !important; align-items: center; gap: 15px;}
+    header button.rounded-circle{min-width: 40px !important; width: 40px !important;
+    height: 40px !important; background: #f0f5ff !important; color: #292929;}
+    header button.rounded-circle svg{color: #292929; font-size: 18px !important; transition: all 0 2s ease-in-out;} 
+    header .part3{gap: 10px}
+    header button.rounded-circle:hover svg{color: #0858f7 !important;}
+    
+    body.dark header button.rounded-circle{background: #12254e !important;}
+    body.dark header button.rounded-circle svg{color: #B4B4B4 !important;}
+
+/* search */
+.searchBox{width: 400px; height: 40px; background: #f0f5ff; border-radius: 6px; padding: 3px 15px;}
+.searchBox input{background: transparent; border: 0px; outline: none; padding-left: 5px;
+font-size: 14px; color: #292929;}
+.searchBox input::-webkit-input-placeholder{color: rgba(0, 0, 0, 6);}
+.searchBox svg{font-size: 18px; color: #292929}
+
+body.dark .searchBox{background: #12254e;}
+body.dark .searchBox input, body.dark .searchBox input::-webkit-input-placeholder,
+body.dark .searchBox svg{color: #B4B4B4 !important;}
+
+/* D Account */
+
+.myAcc{ text-align: left !important; text-transform: capitalize !important;}
+.myAcc .userImg{display: flex; align-items: center; justify-content: center;
+    overflow: hidden; width: 40px; height: 40px;}
+.myAcc .userImg .rounded-circle{display: flex; align-items: center; justify-content: center;
+overflow: hidden; width: 100%px; height: 100%px; cursor: pointer; position: relative;}
+.myAcc .userImg .rounded-circle img{object-fit: cover; width: 100%;}
+
+.myAcc .userInfo{padding-left: 10px;}
+.myAcc .userInfo h4{font-size: 15px; font-weight: 600; margin-bottom: 0px; color: #292929;}
+
+body.dark .myAcc .userInfo *{color: #B4B4B4 !important;}
+body.dark .MuiPaper-elevation{background-color: #12254e !important;}
+body.dark .MuiPaper-elevation li *, body.dark .MuiPaper-elevation li{color: #B4B4B4 !important;}
+body.dark #account-menu .MuiPaper-elevation{border: 1px solid #12254e;}
+
+#account-menu .MuiPaper-elevation{border-radius: 8px !important; border: 1px solid #fff; border-radius: 8px; box-shadow: inset;}
+#account-menu li{font-size: 14px !important; padding: 10px 12px !important;}
+#account-menu li svg{font-size: 20px !important;}
+
+
+/* Drop down notifications */
+#notifications .MuiPaper-elevation{right: 170px !important; width: 290px !important; 
+left: auto !important; border: 1px solid #fff; border-radius: 8px; box-shadow: inset; }
+
+// .dropdown_list .scroll::-webkit-scrollbar{width: 4px !important; height: 4px !important;}
+// .dropdown_list .scroll::-webkit-scrollbar-thumb{background: #0858f7 !important;}
+// .dropdown_list .scroll::-webkit-scrollbar-track{background: #f0f0f0 !important;}
+
+/* Tạo kiểu cho thanh cuộn */
+.dropdown_list .scroll::-webkit-scrollbar {
+    width: 0; /* Điều chỉnh độ rộng của thanh cuộn */
+  }
+
+  .dropdown_list .scroll:hover::-webkit-scrollbar {
+    width: 4px; /* Điều chỉnh độ rộng của thanh cuộn */
+  }
+  
+  .dropdown_list .scroll::-webkit-scrollbar-thumb {
+    background-color: #0858f7; /* Màu xanh cho thanh trượt của scrollbar */
+    border-radius: 8px; /* Tạo bo tròn cho scrollbar để thẩm mỹ hơn */
+  }
+  
+  /* Nếu cần hiệu ứng hover cho thanh cuộn */
+  .dropdown_list .scroll::-webkit-scrollbar-thumb:hover {
+    width: 4px;
+    background-color: #0649c5; /* Màu đậm hơn khi hover */
+  }
+  
+  
+  
+.dropdown_list .head{padding: 10px 0px;}
+.dropdown_list .head h4{font-size: 17px; font-weight: 600; padding-left: 10px;}
+.dropdown_list li.MuiButtonBase-root{background: #ebf6ff !important; color: #000 !important;
+    padding: 10px 15px !important;}
+.dropdown_list li.MuiButtonBase-root:hover{background: #e2e8ed !important;}
+
+ body.dark .dropdown_list li.MuiButtonBase-root{background-color: #12254e !important; background: #12254e !important;}
+ body.dark .dropdown_list .head h4{color: #B4B4B4 !important;}
+
+.dropdownInfo {padding-left: 15px;}
+.dropdownInfo h4{font-size: 13px; font-weight: 500; white-space: break-spaces; 
+    line-height: 25px; margin-top: 0px; margin-bottom: 0px;}
+.dropdownInfo h4 b{font-weight: 600; margin-right: 5px;}
+
+.userImg img{display: flex; align-items: center; justify-content: center;
+    overflow: hidden; width: 40px; height: 40px; border-radius: 50%;}
+.dropdownInfo p{font-size: 12px; font-weight: 500; margin-top: 0px;}
+
+.text-sky{color: #0858f7 !important;}
+
+.dropdown_list .scroll{max-height: 250px; overflow-y: scroll; overflow-x: hidden;}

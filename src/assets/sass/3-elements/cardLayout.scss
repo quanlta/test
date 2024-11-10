@@ -1,0 +1,29 @@
+.mc-card {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    @include transition-linear;
+
+    @include mobile-breakpoint {
+        padding: 20px 15px;
+    }
+
+    &:hover {
+        box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 6%);
+    }
+}
+ body.dark .mc-card {background-color: #12254e !important;}
+ body.dark .mc-card-title {color: #E4E4E4 !important;}
+
+.mc-card-header {
+    margin-bottom: 18px;
+    @include flex-dimension(flex-start, space-between, 0px);
+}
+
+.mc-card-title {
+    line-height: 27px;
+    @include text-font(17px, 600);
+    text-transform: capitalize;
+}
+

@@ -1,0 +1,125 @@
+.about-us {
+  padding: 20px;
+  text-align: center;
+  background-image: url('src/assets/ian-dooley-DJ7bWa-Gwks-unsplash.png');
+
+  .description-container {
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 900px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: whitesmoke;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: whitesmoke;
+    }
+
+    .page-description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      .text-content {
+        width: 60%;
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          text-align: left;
+          color: #000;
+        }
+      }
+
+      .image-container {
+        width: 55%;
+        .description-image {
+          max-width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          height: 600px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    .team-member {
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .member-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        height: 80px; // Fixed height for consistent alignment
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        height: 50px; // Fixed height for consistent alignment
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+
+        a {
+          margin: 0 5px;
+          color: #000;
+          font-size: 1.5rem;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #ff7f50;
+          }
+        }
+      }
+    }
+  }
+}

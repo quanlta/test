@@ -1,0 +1,45 @@
+.mc-main {
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    @include margin(69px, 16px, 16px, 16px);
+    @include transition-linear;
+    
+    @include mobile-breakpoint {
+        padding: 16px;
+        @include margin(62px, 0px, 0px, 0px);
+    }
+}
+
+body.dark .mc-main {background-color: #071739 !important;}
+
+
+    // .mc-main {
+    //     &.active {
+    //         margin-left: 260px;
+
+    //         @include laptop-breakpoint {
+    //             margin-left: 16px;
+    //         }
+
+    //         @include mobile-breakpoint {
+    //             margin-left: 0px;
+    //         }
+    //     }
+    // }
+
+
+
+    // .mc-main {
+    //     &.active {
+    //         margin-right: 260px;
+
+    //         @include laptop-breakpoint {
+    //             margin-right: 16px;
+    //         }
+
+    //         @include mobile-breakpoint {
+    //             margin-right: 0px;
+    //         }
+    //     }
+    // }

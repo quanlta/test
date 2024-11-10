@@ -1,0 +1,180 @@
+.mc-user-avatar-upload {
+    text-align: center;
+}
+
+.mc-user-avatar {
+    width: fit-content;
+    border-radius: 50%;
+    border: 2px solid #0858f7;
+    margin: 0px auto 15px;
+
+    img {
+        width: 145px;
+        height: 145px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid transparent;
+    }
+}
+
+.mc-user-group {
+    padding: 0px 10px 10px;
+}
+
+.mc-user-profile {
+    margin-bottom: 20px;
+    @include flex-dimension(center, flex-start, 10px 20px);
+    flex-wrap: wrap;
+
+    h4 {
+        text-transform: capitalize;
+
+        span {
+            @include text-font(15px, 400);
+            text-transform: lowercase;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+}
+
+.mc-user-metalist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    li {
+        display: flex;
+        gap: 15px;
+
+        i { 
+            font-size: 20px;
+            color: #0858f7; 
+        }
+
+        span { font-size: 15px; }
+    }
+}
+
+.mc-user-bio {
+    font-size: 15px;
+}
+
+.mc-user-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    a {
+        @include flex-dimension(center, center, 5px);
+        border-radius: 8px;
+        padding: 8px 15px;
+        color: #ffffff;
+        background-color: #f0f0f0;
+
+        i {
+            font-size: 15px;
+        }
+
+        span {
+            @include text-font(14px, 400);
+            text-transform: capitalize;
+        }
+
+        &.facebook { background-color: #3b5998; }
+        &.github { background-color: #010409; }
+        &.linkedin { background-color: #0e76a8; }
+        &.youtube { background-color: #FF0000; }
+        &.whatsapp { background-color: #25D366; }
+    }
+}
+
+.mc-user-activity-item {
+    position: relative;
+    margin: 15px 0px;
+    @include transition-linear;
+
+    &:hover {
+        border-color: #0858f7;
+        &::before { background-color: #0858f7; }
+    }
+
+    &::before {
+        content: "";
+        @include position-top-left(absolute, 0px, -10px, 1);
+        @include content-center(20px, 20px, 50%);
+        border: 6px solid #ffffff;
+        background-color: #b4b4b4;
+        @include transition-linear;
+    }
+}
+
+[dir="ltr"] {
+    .mc-user-activity-item {
+        padding-left: 20px;
+        border-left: 1px solid #e4e4e4;
+    }
+}
+
+[dir="rtl"] {
+    .mc-user-activity-item {
+        padding-right: 20px;
+        border-right: 1px solid #e4e4e4;
+    }
+}
+
+.mc-user-activity-title {
+    display: flex;
+    gap: 10px;
+
+    h6 {
+        font-size: 14px;
+        text-transform: inherit;
+    }
+
+    small {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+.mc-user-activity-body {
+    padding: 15px 0px;
+    font-size: 15px;
+
+    .mc-btn {
+        margin-top: 20px;
+    }
+}
+
+.mc-user-activity-media {
+    margin-top: 15px;
+    @include flex-dimension(center, flex-start, 10px);
+
+    img {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 15%);
+    }
+
+    h6 { font-size: 14px; }
+}
+
+body.dark .mc-duel-text-title  {
+    color: #E4E4E4;
+}
+
+body.dark .mc-divide-title {
+    color: #E4E4E4;
+}
+
+body.dark .mc-user-metalist {
+    color: #B4B4B4;
+}
+
+body.dark .mc-user-bio {
+    color: #B4B4B4;
+}

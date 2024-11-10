@@ -1,0 +1,138 @@
+.mc-ecommerce-card {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    @include transition-linear;
+
+    &:hover {
+        box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 8%);
+    }
+
+    &.green {
+        .mc-ecommerce-card-icon {
+            color: #89ecb3;
+            background: linear-gradient(#27bf68, #1a9f53);
+        }
+
+        .mc-ecommerce-card-trend { color: #1a9f53; }
+        .mc-ecommerce-card-compare mark { background-color: #187d44; }
+        .mc-dropdown-toggle { color: #187d44; }
+    }
+
+    &.purple {
+        .mc-ecommerce-card-icon {
+            color: #f3a0ff;
+            background: linear-gradient(#de2fff, #be0ee1);
+        }
+
+        .mc-ecommerce-card-trend { color: #be0ee1; }
+        .mc-ecommerce-card-compare mark { background-color: #a808c3; }
+        .mc-dropdown-toggle { color: #a808c3; }
+    }
+
+    &.blue {
+        .mc-ecommerce-card-icon {
+            color: #96cefa;
+            background: linear-gradient(#4094f1, #2b77e5);
+        }
+
+        .mc-ecommerce-card-trend { color: #2b77e5; }
+        .mc-ecommerce-card-compare mark { background-color: #2262d3; }
+        .mc-dropdown-toggle { color: #2262d3; }
+    }
+
+    &.yellow {
+        .mc-ecommerce-card-icon {
+            color: #f6e053;
+            background: linear-gradient(#edb213, #e1940e);
+        }
+
+        .mc-ecommerce-card-trend { color: #e1940e; }
+        .mc-ecommerce-card-compare mark { background-color: #ae640f; }
+        .mc-dropdown-toggle { color: #ae640f; }
+    }
+}
+
+
+    .mc-ecommerce-card {
+        &.blue { background: linear-gradient(to right, #64b3f6, #2b77e5) }
+        &.green { background: linear-gradient(to right, #4eda89, #1a9f53) }
+        &.purple { background: linear-gradient(to right, #ed68ff, #be0ee1) }
+        &.yellow { background: linear-gradient(to right, #f4d02b, #e1940e) }
+    }
+
+
+
+    .mc-ecommerce-card {
+        &.blue { background: linear-gradient(to left, #64b3f6, #2b77e5) }
+        &.green { background: linear-gradient(to left, #4eda89, #1a9f53) }
+        &.purple { background: linear-gradient(to left, #ed68ff, #be0ee1) }
+        &.yellow { background: linear-gradient(to left, #f4d02b, #e1940e) }
+    }
+
+
+.mc-ecommerce-card-trend {
+    font-size: 150px;
+    opacity: 0.8;
+}
+
+
+    .mc-ecommerce-card-trend {
+        @include position-bottom-left(absolute, 0px, 0px, 1);
+    }
+
+
+
+    .mc-ecommerce-card-trend {
+        @include position-bottom-right(absolute, 0px, 0px, 1);
+    }
+
+
+.mc-ecommerce-card-head {
+    @include flex-dimension(flex-start, space-between, 0px);
+    margin-bottom: 40px;
+}
+
+.mc-ecommerce-card-meta {
+    @include text-font(32px, 700);
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+
+    span {
+        margin-bottom: 7px;
+        @include text-font(16px, 500);
+        text-transform: capitalize;
+        display: block;
+    }
+}
+
+.mc-ecommerce-card-icon {
+    @include content-center(50px, 50px, 8px);
+    font-size: 28px;
+}
+
+.mc-ecommerce-card-foot {
+    position: relative;
+    z-index: 1;
+    @include flex-dimension(center, space-between, 0px);
+}
+
+.mc-ecommerce-card-compare {
+    @include flex-dimension(center, flex-start, 0px 5px);
+    color: #ffffff;
+
+    mark {
+        padding: 4px 6px;
+        border-radius: 4px;
+        @include text-font(12px, 500);
+        color: #ffffff;
+    }
+
+    span {
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+}

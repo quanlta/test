@@ -1,0 +1,141 @@
+.coffeeShopsPage {
+  margin-top: 135px;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+}
+
+// Grid layout for the coffee shop cards
+.coffeeShopsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+// Individual coffee shop card styling
+.coffeeShopCard {
+  display: flex;
+  flex-direction: row;
+  width: 90%;             // Makes the card take up more screen width
+  max-width: 900px;       // Increases the maximum width
+  min-height: 250px;      // Adds height for a more prominent display
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 50%;           // Increases the image width to take half of the card
+    height: 100%;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+  }
+
+  // Information section on the right
+  .coffeeShopInfo {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin: 8px 0;
+    }
+
+    // Styles for the Book button at the bottom
+    .bookButton {
+      margin-top: 20px;  // Adds spacing above the button
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+/* Add this to your CoffeeShopsPage.module.scss */
+.selected {
+  border: 2px solid #1890ff; /* Example highlight style */
+  background-color: #e6f7ff; /* Example highlight style */
+}
+// Styling for PODs section
+.pods-page {
+  margin-top: 30px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  // Container for the POD items
+  .pods-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Three columns
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  // Individual POD card styling
+  .pod-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+
+    .pod-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .pod-details {
+      padding: 10px;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin: 5px 0;
+      }
+    }
+  }
+}

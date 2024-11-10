@@ -1,0 +1,107 @@
+
+
+
+{
+    
+    "thead": ["Name", "Role", "Email", "Password", "Phone", "Status", "Created", "Actions"],
+    "tbody": [
+        
+        {
+            "name": "John Doe",
+            "src": "/images/02.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "jane@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Jane Smith",
+            "src": "/images/03.webp",
+            "alt": "Jane Smith",
+            "role": { "text": "member", "icon": "group" },
+            "email": "jane@example.com",
+            "password": "654321",
+            "phone": "987-654-3210",
+            "status": "pending",
+            "created": "2023-02-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Justin Bae",
+            "src": "/images/04.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Rebeca",
+            "src": "/images/05.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Lucy",
+            "src": "/images/06.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Sabo",
+            "src": "/images/02.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Ace",
+            "src": "/images/03.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        },
+        {
+            "name": "Zoro",
+            "src": "/images/04.webp",
+            "alt": "John Doe",
+            "role": { "text": "admin", "icon": "admin_panel_settings" },
+            "email": "john@example.com",
+            "password": "123456",
+            "phone": "123-456-7890",
+            "status": "approved",
+            "created": "2023-01-01",
+            "action": { "view": "View", "edit": "Edit", "block": "Block" }
+        }
+
+    ]
+}

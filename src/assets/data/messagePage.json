@@ -1,0 +1,136 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Miron Mahmud",
+        "src": "/src/assets/02.webp",
+        "time": "Now",
+        "text": "What's your current career opportunity?",
+        "status": "online",
+        "active": "active",
+        "mark": "unread",
+        "badge": 3
+      },
+      {
+        "id": 2,
+        "name": "Tahmina Bonny",
+        "src": "/src/assets/02.webp",
+        "time": "3m",
+        "text": "What are you working on?",
+        "status": "offline"
+      },
+      {
+        "id": 3,
+        "name": "Labonno Khan",
+        "src": "/src/assets/03.webp",
+        "time": "5h",
+        "text": "Any plans for the weekend?",
+        "status": "offline",
+        "mark": "unread",
+        "badge": 1
+      },
+      {
+        "id": 3,
+        "name": "Labonno Khan",
+        "src": "/src/assets/04.webp",
+        "time": "5h",
+        "text": "Any plans for the weekend?",
+        "status": "offline",
+        "mark": "unread",
+        "badge": 1
+      },
+      {
+        "id": 3,
+        "name": "Labonno Khan",
+        "src": "/src/assets/05.webp",
+        "time": "5h",
+        "text": "Any plans for the weekend?",
+        "status": "offline",
+        "mark": "unread",
+        "badge": 1
+      },
+      {
+        "id": 3,
+        "name": "Labonno Khan",
+        "src": "/src/assets/06.webp",
+        "time": "5h",
+        "text": "Any plans for the weekend?",
+        "status": "offline",
+        "mark": "unread",
+        "badge": 1
+      },
+      {
+        "id": 3,
+        "name": "Labonno Khan",
+        "src": "/src/assets/03.webp",
+        "time": "5h",
+        "text": "Any plans for the weekend?",
+        "status": "offline",
+        "mark": "unread",
+        "badge": 1
+      }
+    ],
+    "chats": [
+      {
+        "id": 1,
+        "src": "/src/assets/02.webp",
+        "time": "2 minute ago!",
+        "text": [
+          {
+            "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "icon": ["done_all"]
+          },
+          {
+            "text": "Omnis dolorem tempora consequatur.",
+            "icon": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "src": "/src/assets/01.webp",
+        "time": "2 minute ago!",
+        "text": [
+          {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "icon": []
+          },
+          {
+            "text": "Omnis dolorem tempora consequatur.",
+            "icon": []
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "src": "/src/assets/02.webp",
+        "time": "2 minute ago!",
+        "text": [
+          {
+            "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            "icon": ["done_all"]
+          },
+          {
+            "text": "Omnis dolorem tempora consequatur.",
+            "icon": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "src": "/src/assets/01.webp",
+        "time": "2 minute ago!",
+        "text": [
+          {
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "icon": []
+          },
+          {
+            "text": "Omnis dolorem tempora consequatur.",
+            "icon": []
+          }
+        ]
+      }
+    ]
+  }
+  

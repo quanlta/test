@@ -1,0 +1,33 @@
+[
+    
+   
+    {
+        "icon": "event_seat",
+        "title": "Available Seats",
+        "text": "50"
+    },
+    {
+        "icon": "schedule",
+        "title": "Booking Time",
+        "text": "8:00 AM - 10:00 PM"
+    },
+    {
+        "icon": "location_on",
+        "title": "Location",
+        "text": "123 Le Van Viet, Thu Duc City"
+    },    
+    {
+    "icon": "sell",
+    "title": "Price",
+    "price": {
+        "old": "$21.00/hour",
+        "now": "$19.00/hour"
+    }
+    },
+    {
+        "icon": "store",
+        "title": "Review",
+        "text": "4.9"
+    }
+    
+]

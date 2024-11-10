@@ -1,0 +1,36 @@
+/* ServiceSection.scss */
+.service-section {
+    display: flex;
+    padding: 2rem;
+  
+    .service-content {
+      width: 50%;
+      
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 50px;
+      }
+      p {
+        font-size: 25px;
+      }
+      
+      .btn-primary {
+        margin-top: 1rem;
+        background-color: #9c5d14;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+      }
+    }
+    
+    .service-image {
+      width: 50%;
+      
+      img {
+        width: 100%;
+      }
+    }
+  }
+  

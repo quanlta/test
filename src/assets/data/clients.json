@@ -1,0 +1,45 @@
+{
+    "thead": ["Clients", "Orders", "Amount", "Action"],
+    "tbody": [
+        {
+            "src": "/images/02.webp",
+            "alt": "Alice Johnson",
+            "name": "Alice Johnson",
+            "order": "648",
+            "amount": "$5500",
+            "action": { "view": "View", "message": "Message" }     
+        },
+        {
+            "src": "/images/03.webp",
+            "alt": "Jane Smith",
+            "name": "Jane Smith",
+            "order": "420",
+            "amount": "$4400",
+            "action": { "view": "View", "message": "Message" } 
+        },
+        {
+            "src": "/images/04.webp",
+            "alt": "Justin Bae",
+            "name": "Justin Bae",
+            "order": "420",
+            "amount": "$4400",
+            "action": { "view": "View", "message": "Message" } 
+        },
+        {
+            "src": "/images/05.webp",
+            "alt": "Rebeca",
+            "name": "Rebeca",
+            "order": "420",
+            "amount": "$4400",
+            "action": { "view": "View", "message": "Message" } 
+        },
+        {
+            "src": "/images/06.webp",
+            "alt": "Lucy",
+            "name": "Lucy",
+            "order": "420",
+            "amount": "$4400",
+            "action": { "view": "View", "message": "Message" } 
+        }
+    ]
+}

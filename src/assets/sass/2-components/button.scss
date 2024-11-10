@@ -1,0 +1,87 @@
+// custom buttons
+@import '../1-helpers/mixins';
+@import '../1-helpers/breakpoints';
+
+.mc-btn {
+    @include text-font (13px, 600);
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    padding: 14px 22px;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 12%);
+    @include transition-linear;
+
+    &:hover { 
+        opacity: 0.8; 
+        color: #ffffff;
+    }
+
+    i {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+
+    &.primary { background-color:#1e66ff; }
+    &.yellow { background-color: #edb213; }
+    &.purple { background-color: #be0ee1; }
+    &.orange { background-color: #ff7300; }
+    &.green { background-color: #1a9f53; }
+    &.blue { background-color: #2b77e5; }
+    &.gray { background-color: #818181; }
+    &.red { background-color: #f11133; }
+
+    &.sm {
+        font-size: 11px;
+        padding: 12px 18px;
+
+        i { font-size: 16px; }
+    }
+
+    &.h-sm { height: 40px; }
+    &.h-md { height: 45px; }
+    &.h-lg { height: 50px; }
+    &.h-xl { height: 55px; }
+}
+
+
+    .mc-btn {
+        i {
+            margin-right: 6px;
+        }
+    }
+
+
+
+    .mc-btn {
+        i {
+            margin-left: 6px;
+        }
+    }
+
+
+// bootstrap buttons
+.btn {
+    @include text-font(12px, 500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: #ffffff;
+    @include transition-linear;
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    &.btn-sm {
+        @include text-font(11px, 500);
+        padding: 8px 15px;
+    }
+}
